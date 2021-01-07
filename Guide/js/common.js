@@ -1,9 +1,11 @@
 $(function(){
+	includeHTML();
+	include_nav_menu();
 	menu();
 });
 
 function menu(){
-	$('.sub_wrap.on>ul').show();
+	//$('.sub_wrap.on>ul').show();
 	$('.sub_wrap .main_menu').on('click', function (){
 		var $sub_wrap = $(this).parent('.sub_wrap').children('ul');
 
@@ -20,4 +22,10 @@ function menu(){
 			$('.sub_wrap').not($(this).parents('.sub_wrap')).addClass('off').removeClass('on');
 		}
 	});
+}
+
+function include_nav_menu(){
+	var $this = $('.category .item').eq(1).text();
+	$('.main_menu').find($this).parent('.sub_wrap').removeClass('off');
+	$('.main_menu').find($this).parent('.sub_wrap').addClass('on');
 }
