@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>노버스메이 웹퍼블리싱 가이드</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="title" content="노버스메이 웹퍼블리싱 가이드">
+	<meta name="description" content="노버스메이 웹퍼블리싱 가이드 페이지입니다.">
+	<meta name="keywords" content="웹퍼블리싱,웹퍼블리싱가이드,가이드">
+	<meta name="author" content="khi">
+	<meta name="og:title" content="노버스메이 웹퍼블리싱 가이드">
+	<meta name="og:url" content="www.novusmay.com">
+	<meta name="og:site_name" content="노버스메이 웹퍼블리싱 가이드">
+	<meta name="og:description" content="노버스메이 웹퍼블리싱 가이드 페이지입니다.">
+	<meta name="og:image" content="#none">
+	<link rel="shortcut icon" type="image/x-icon" href="./img/favicon.png">
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+	<div class="inner">
+		<header>
+			<div class="top">
+				<h1 title="목차 천제 보기"><a href="index.html">노버스메이 웹퍼블리싱 가이드</a></h1>
+				<div class="update">
+					<dl>
+						<dt>업데이트 날짜</dt>
+						<dd>2020-05-20</dd>
+					</dl>
+					<dl>
+						<dt>작성자</dt>
+						<dd>김혜인</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="menu">
+				<ol>
+					<li data-tab="setting"><a href="#setting">설정하기</a></li>
+					<li data-tab="html_setting"><a href="#html_setting">HTML 작업규칙</a></li>
+					<li data-tab="css_setting"><a href="#css_setting">CSS 작업규칙</a></li>
+					<li data-tab="js_setting"><a href="#js_setting">jqeury/script 작업규칙</a></li>
+					<li data-tab="naming"><a href="#naming">파일/폴더/이미지 네이밍 규칙</a></li>
+					<li data-tab="layout"><a href="#layout">레이아웃 구조</a></li>
+					<li data-tab="etc"><a href="#etc">기타</a></li>
+				</ol>
+			</div>
+		</header>
+		<div class="container">
+			<h2>목차</h2>
+			<section id="setting">
+				<h3>설정하기</h3>
+				<div class="list_area">
+					<div class="item">
+						<span class="title">에디터 설정하기</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>마크업 작업할 때 에디터는 '서브라임 텍스트'를 사용합니다. 해당 링크에서 다운 받으신 후 에디터 설정은 개인의 취향에 맞게 설정해주세요.</span>
+									<span>'비주얼스튜디오2019' 에디터는 aspx파일 수정 및 깃으로 커밋할 때 사용합니다. 해당 링크에서 다운 받으신 후 에디터 설정은 개인의 취향에 맞게 설정해주세요.</span>
+								</p>
+								<div class="detail">
+									<div><a href="https://www.sublimetext.com/3" target="_blank">서브라임 텍스트 다운받기</a></div>
+									<div><a href="https://visualstudio.microsoft.com/ko/vs/whatsnew/" target="_blank">비주얼 스튜디오 2019 다운받기</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="title">깃 설정하기</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>비주얼스튜디오를 설치 후 진행합니다.</span>
+									<span>'비주얼 스튜디오에 깃서버 연동하기'를 참고하여 비주얼스튜디오와 깃서버를 연동합니다.</span>
+								</p>
+								<div class="detail">
+									<a href="https://aspdotnet.tistory.com/2112" target="_blank">비주얼 스튜디오에 깃서버 연동하기</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="title">개발서버 접속</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>개발팀 수정 요청이 있을 경우 직접 개발서버에 접속하여 수정합니다.</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="html_setting">
+				<h3>HTML 작업규칙</h3>
+				<div class="list_area">
+					<div class="item">
+						<span class="title">문서형 선언</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>DTD:Document Type Definition</span>
+									<span>DTD 선언은 기본 html5에서 제공하는 것을 기본으로 합니다.</span>
+								</p>
+								<div class="detail">
+									<span>&lt;!DOCTYPE html&gt;</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="title">언어 지정</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>언어 지정은 기본 한글로 합니다.</span>
+								</p>
+								<div class="detail">
+									<span>&lt;html lang="ko"&gt;</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="title">문자셋(charset) 지정</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>문자셋 지정은 기본 utf-8로 합니다.</span>
+								</p>
+								<div class="detail">
+									<span>&lt;meta charset="utf-8"&gt;</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="title">head 구조</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>head의 순서는 title, meta, meta og, link 순서로 합니다.</span>
+									<span>script는 head에 넣지 않습니다.</span>
+									<span>css는 vandor css, font, reset, style 순서로 합니다.</span>
+								</p>
+								<div class="detail">
+									<img src="./img/img_head.png" alt="head 구조">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="title">파일 경로</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>파일 경로는 상대경로로 표기합니다.</span>
+									<span>같은 위치에 있는 경우에도 './'는 생략하지 않습니다.</span>
+									<span>메뉴 링크에만 './'를 생략합니다.</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="title">코드 들여쓰기</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>코드의 가독성을 위해 코드 들여쓰기 규칙을 준수합니다.</span>
+									<span>스크립트 작성시에도 들여쓰기 규칙을 준수합니다.</span>
+									<span>html의 자식 요소인 head, body의 경우에는 들여쓰기를 하지 않습니다.</span>
+									<span>head안에 들어가는 요소들은 1탭 들여쓰기로 작성합니다.</span>
+								</p>
+								<div class="detail">
+									<img src="./img/img_markup.png" alt="mark-up">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="title">빈줄</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>객체를 감싸고 있는 그룹을 구분하기 위해 1줄 빈칸은 허용합니다.</span>
+									<span>빈칸은 1줄을 초과하지 않으며 주석 다음줄은 빈칸으로 두지 않습니다.</span>
+								</p>
+								<div class="detail">
+									<img src="./img/img_empty.png" alt="빈줄">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="title">주석</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>마크업에서의 주석은 개발 영역에 설명이 필요한 경우에만 사용합니다.</span>
+									<span>주석을 달 경우에는 말머리에 [D]를 씁니다.</span>
+									<span>구조 설명을 위한 주석은 피합니다.</span>
+									<span>스크립트에서 주석은 해당 함수를 설명하기 위한 경우에만 사용합니다.</span>
+								</p>
+								<div class="detail">
+									<img src="./img/img_description.png" alt="주석">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="title">버튼의 사용 범위 : a태그와 button 태그의 사용</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>버튼에는 button 태그를 사용합니다.</span>
+									<span>앵커 이동, 파일을 다운로드 하는 기능의 버튼인 경우에만 a태그를 사용합니다.</span>
+									<span>input type을 사용해 버튼을 만드는 것은 피합니다.</span>
+								</p>
+								<div class="detail">
+									<img src="./img/img_button.png" alt="버튼">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="title">i태그 활용</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>i태그는 기본적으로 폰트 기울기 태그이나 기울기 기능을 리셋 후 아이콘 또는 개발에서 데이터값이 들어가는 태그에 사용합니다.</span>
+									<span>태그 중 가장 작은 단위의 태그</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="title">#none</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>href, value등에서 공란으로 처리해야하는 경우에는 '#none'으로 처리합니다.</span>
+								</p>
+								<div class="detail">
+									<img src="./img/img_button.png" alt="공란처리">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="title">Form 사용</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>form은 마크업단에서 사용하지 않습니다.</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="title">페이지 작업 순서</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>페이지 작업 순서는 웹 흐름의 순서대로 합니다.</span>
+									<span>ex) 로그인 > 메인 > 메뉴 순서대로</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="item w3c">
+						<span class="title">W3C 검사</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>마크업 작업이 완료 된 후(완료처리 하기 전), W3C 검사는 필수로 합니다.</span>
+									<span>한 페이지 작업 완료 후 W3C 검사를 합니다.</span>
+									<span>W3C 검사에서 에러(빨간경고) 처리를 한 후에 작업 완료 처리를 합니다.</span>
+								</p>
+								<div class="detail">
+									<a href="https://validator.w3.org/" target="_blank">Markup Validation Service 바로가기</a>
+								</div>
+								<div class="detail">
+									<img src="./img/img_w3c.png" alt="w3c 검사">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item index">
+						<span class="title">index.html 파일 작성하기</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>프로젝트를 진행하기 전 index.html/html_list.html(이하 index.html)를 작성합니다.</span>
+									<span>index.html에는 프로젝트명, 작업자, 작업일, 홈페이지 스타일(반응형 또는 웹/태블릿/앱)을 작성합니다.</span>
+									<span>기존 index.html 파일을 활용하여 작성합니다.</span>
+									<span>index.html은 서비스와 홈페이지에서 파일명이 각각 다릅니다.</span>
+									<span>서비스 일 때 : index.html</span>
+									<span>홈페이지 일 때 : html_list.html</span>
+								</p>
+								<dl class="detail">
+									<dt>*서비스의 경우</dt>
+									<dd>파일명 : index.html</dd>
+									<dd>서비스의 경우에는 index.aspx 파일이 main.html 파일이기 때문에 파일명이 index.html라도 괜찮습니다.</dd>
+									<dd>index.html 파일에 웹, 앱, 에이전트 모든 페이지를 리스트업 합니다.</dd>
+								</dl>
+								<dl class="detail">
+									<dt>*홈페이지의 경우</dt>
+									<dd>파일명 : html_list.html</dd>
+									<dd>서비스의 경우에는 index.html 파일이 main.html 파일이기 때문에 파일명이 html_list.html로 작성해야 합니다.</dd>
+									<dd>메인페이지 파일명은 index.html로 작업합니다.</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="css_setting">
+				<h3>CSS 작업규칙</h3>
+				<div class="list_area">
+					<div class="item">
+						<span class="title">기본규칙</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>CSS 컨벤션은 'NHN Coding Conventions_for_Markup Languages'를 기준으로 합니다.</span>
+									<span>CSS 작성 순서는 마크업 구조의 순서로 작성합니다.</span>
+									<span>공통 CSS를 가장 먼저 작성합니다.</span>
+									<span>미디어 쿼리는 가장 마지막에 작성하며, 큰 브라우저의 크기를 먼저 작성합니다.</span>
+									<span>미디어 쿼리는 max-width값으로 작성합니다.</span>
+									<span>CSS는 모두 한줄쓰기로 작성합니다.</span>
+									<span>ex) .download{width:100px;background-color:#fff;color:#07235e;border:1px solid #07235e}</span>
+									<span>마지막 ;는 생략합니다.</span>
+									<span>ex) .slt_bx{float:left;margin-right:8px}</span>
+									<span>선택자와 중괄호의 사이에 공백을 사용하지 않는다.</span>
+									<span>ex) .page_btn{border-top:1px solid #ebebeb}</span>
+									<span>클래스명을 선언하지 않고 태그를 사용하는 경우에는 꺽쇠(&gt;)를 사용합니다.</span>
+									<span>ex) .item>dd .btn{float:left}</span>
+									<span>CSS 선언 순서는 아래 표를 참고</span>
+									<span>CSS는 한 파일당 5000줄 이상 넘어가지 않습니다.</span>
+								</p>
+								<div class="detail">
+									<a href="./files/NHN_Coding_Conventions_for_Markup_Languages-v2.75_open.pdf" target="_blank" download>NHN Coding Conventions_for_Markup Languages 다운로드</a>
+								</div>
+								<div class="detail">
+									<span>*CSS선언 순서</span>
+									<table>
+										<thead>
+											<tr>
+												<th>순서</th>
+												<th>의미</th>
+												<th>대표되는 속성(그룹)</th>
+												<th>관련 속성</th>
+												<th>기타</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>표시</td>
+												<td>display</td>
+												<td>block, none, inline-block</td>
+												<td>-</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>넘침</td>
+												<td>overflow</td>
+												<td>hidden, auto, scroll</td>
+												<td>-</td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>흐름</td>
+												<td>float</td>
+												<td>right, left, unset</td>
+												<td>-</td>
+											</tr>
+											<tr>
+												<td>4</td>
+												<td>위치</td>
+												<td>position</td>
+												<td>relative, absolute, static, top, left, right, bottom</td>
+												<td>-</td>
+											</tr>
+											<tr>
+												<td>5</td>
+												<td>크기</td>
+												<td>width / height</td>
+												<td>-</td>
+												<td>-</td>
+											</tr>
+											<tr>
+												<td>6</td>
+												<td>간격</td>
+												<td>margin / padding</td>
+												<td>top, right, bottom, left</td>
+												<td>-</td>
+											</tr>
+											<tr>
+												<td>7</td>
+												<td>배경</td>
+												<td>background</td>
+												<td>background, background-color, background-position 등</td>
+												<td>-</td>
+											</tr>
+											<tr>
+												<td>8</td>
+												<td>글자</td>
+												<td>font</td>
+												<td>color, font-size, font-wieght, text-align 등</td>
+												<td>글자는 항상 color, font-size 이 순서로 작성한다.</td>
+											</tr>
+											<tr>
+												<td>9</td>
+												<td>테두리</td>
+												<td>border</td>
+												<td>border, border-radius, box-size</td>
+												<td>테두리는 항상 마지막에 box-size를 작성한다.</td>
+											</tr>
+											<tr>
+												<td>10</td>
+												<td>동작</td>
+												<td>animatin</td>
+												<td>transform 등</td>
+												<td>-</td>
+											</tr>
+											<tr>
+												<td>11</td>
+												<td>기타</td>
+												<td>-</td>
+												<td>-</td>
+												<td>위에 언급되지 않은 속성들은 동작 속성 이후에 선언하며, 기타 내 속성의 선언 순서는 무관하다</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="title">공통 css</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>reset.css와 font.css는 공통 css를 사용합니다.</span>
+								</p>
+								<div class="detail">
+									<div><a href="./files/css.zip" target="_blank" download>공통 CSS 다운로드</a></div>
+									<div><a href="./files/font.zip" target="_blank" download>폰트 다운로드</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="title">css파일 네이밍 규칙</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>플러그인 css의 경우에는 vendor 폴더 안에 저장합니다.</span>
+									<span>[서비스의 경우] web.css, user.css, mobile.css, agent.css, admin.css로 나눠서 작업합니다.</span>
+									<span>[서비스의 경우] 고객사 커스텀의 경우에는 '_고객사명'을 추가합니다.</span>
+									<span>ex) 경기대학교 커스텀 : web_kgu.css, user_kgu.css</span>
+									<span>[홈페이지의 경우] style.css로 나눠서 작업합니다.</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="title">아이디/클래스 네이밍 규칙</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>ID의 사용은 피합니다. 불가피하게 사용해야하는 경우(input-label)를 제외하고는 ID는 사용하지 않습니다. 클래스로 작업해주세요.</span>
+									<span>모두 소문자로 작성합니다.</span>
+									<span>두 단어 이상의 조합인 경우에는 언더바(_)를 사용합니다.</span>
+									<span>ex) css_setting (O) / CssSetting (X) / cssSetting (X)</span>
+									<span>세 단어 이상의 조합은 피합니다.</span>
+									<span>ex) today_select_bx (O) / today_select_bx_item (X)</span>
+									<span>약어 사용은 피합니다. 다만, 모두가 공통으로 사용하고 있는 약어들은 사용 가능합니다.</span>
+									<span>ex) btn, cnt, tit, txt, img, bx 등</span>
+									<span>숫자를 붙이는 경우에는 _0N으로 작성합니다.</span>
+									<span>ex) item_01 (O) / today_select_bx_01 (O) / item1 (X) / item_1 (X)</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="title">image 삽입 규칙 : img 태그와 css background 사용</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>이미지는 background로 넣습니다.</span>
+									<span>로고, 프로필이미지와 같이 커스텀, 개발이 필요한 이미지만 img태그를 사용하여 마크업에 넣습니다.</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="title">크로스 브라우징</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>크로스 브라우징은 익스플로러 9버전까지 확인합니다.</span>
+									<span>css에서 webkit 사용은 transform, placeholder만 사용합니다.</span>
+									<span>웹킷작성 순서는 -webkit- > -ms- > -moz- > 일반 순으로 작성합니다.</span>
+								</p>
+								<p class="description">
+									<span>ex) .logo_wrap{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="title">클리어픽스 사용</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>클리어픽스는 float한 요소가 깨지는 것을 방지합니다.</span>
+									<span>float:left 또는 float:right를 선언 한 후, 부모요소에 클리어픽스를 선언합니다.</span>
+									<span>클리어픽스는 가상선택자 after를 사용하여 작성합니다.</span>
+								</p>
+								<p class="detail">
+									<span>작성예시) div:after{display:block;clear:both;content:""}</span>
+									<img src="./img/img_clearfix.png" alt="클리어픽스">
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="title">가상선택자 :before, :after 사용</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>가상선택자 after는 클리어픽스를 사용할때만 사용합니다. 그 외의 경우에는 사용을 피합니다.</span>
+									<span>클리어픽스를 제외한 가상선택자는 before를 사용합니다.</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="title">dimmed와 z-index의 사용</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>dimmed의 z-index는 무조건 1500으로 합니다.</span>
+									<span>dimmed의 z-index를 기준으로 100단위로 가감해서 사용합니다.</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="title">영역을 나타내는 클래스와 그 크기</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>영역을 정할 때 사용하는 클래스는 _area, _section, _cnt, _bx, _wrap을 사용합니다.</span>
+									<span>클래스의 크기는 _area > _section > _cnt > _bx > _wrap으로 합니다.</span>
+									<span>_wrap이 가장 작은 영역입니다.</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="item service_btn">
+						<span class="title">서비스에서 버튼 작업</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>서비스의 경우 다국어 작업을 고려하여 작업을 해야하기때문에 width 고정값을 사용하지 않습니다.</span>
+								</p>
+								<dl class="detail">
+									<dt>*버튼 css 작업</dt>
+									<dd>1. 버튼크기는 한글에 맞춰 min-width로 설정합니다.</dd>
+									<dd>2. padding으로 좌우 여백을 줍니다.</dd>
+									<dd>3. 영어로 수정했을 때 레이아웃을 확인합니다.</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="js_setting">
+				<h3>jqeury/script 작업규칙</h3>
+				<div class="list_area">
+					<div class="item">
+						<span class="title">기본규칙</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>스크립트는 .inner 다음에 작성합니다.</span>
+									<span>제이쿼리 버전은 jquery 1.11.1를 사용합니다.</span>
+									<span>스크립트 순서는 jquery 1.11.1 > vendor > common.js 순서로 합니다.</span>
+									<span>공통으로 사용되는 스크립트는 common.js에 작성합니다.</span>
+									<span>플러그인 스크립트는 vendor폴더에 넣습니다.</span>
+									<span>스크립트는 function()을 사용합니다.</span>
+									<span>function() 네이밍규칙은 클래스 네이밍 규칙과 동일합니다.</span>
+									<span>click이벤트는 on('click', function(){})을 사용합니다.</span>
+								</p>
+								<div class="detail">
+									<a href="./files/js.zip" target="_blank" download>플러그인 js 다운받기</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="naming">
+				<h3>파일/폴더/이미지 네이밍 규칙</h3>
+				<div class="list_area">
+					<div class="item">
+						<span class="title">파일명 네이밍 규칙</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>파일명은 두단어 이상 조합은 피합니다.</span>
+									<span>두단어 이상 조합의 경우에는 단어사이에 언더바(_)를 사용합니다.</span>
+									<span>web 파일이 아닌 경우에는 파일명 시작은 서비스 타입으로 시작합니다.</span>
+									<span>서비스타입을 넣는 경우 세단어 조합까지 가능합니다.</span>
+									<span>ex) user_list.html (O) / user_tpye_list.html (X) / agent_user_list.html (O) / agent_login.html (O)</span>
+								</p>
+								<p class="detail">
+									<img src="./img/img_file_name.png" alt="파일명">
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="title">폴더명 네이밍 규칙</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>폴더명은 축약어를 사용하지 않습니다.</span>
+									<span>img, js는 예외로 축약어를 사용합니다.</span>
+									<span>업체별 폴더를 생성할 경우 폴더명 가장 마지막에 '_업체명'을 붙입니다.</span>
+									<span>ex)타임키퍼_경기대 (O) / 경기대 (X)</span>
+								</p>
+								<p class="detail">
+									<img src="./img/img_folder_name.png" alt="폴더명">
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="title">이미지명 네이밍 규칙</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>파비콘과 자사로고는 favicon, logo로 합니다.</span>
+									<span>이미지 활용 타입을 분류하여 작성합니다.</span>
+									<span>클릭해서 활성화 되는 이미지는 파일명 끝에 _active를 붙입니다.</span>
+									<span>이미지의 성격에 맞춰 네이밍을 작성합니다.</span>
+									<span>축약어의 사용은 되도록 피하지만, 너무 길어지는 경우에는 3글자 또는 4글자 안으로 축약합니다. 너무 짧은 축약은 피합니다.</span>
+									<span>세 단어 조합까지만 사용합니다.</span>
+									<span>네 단어 조합은 _active를 붙였을 경우에만 가능합니다.</span>
+									<span>중복 활용의 이미지가 있는 경우에는 _숫자를 붙여줍니다.</span>
+									<span>화살표의 경우 prev와 next를 한 세트로 넘버링 합니다.</span>
+									<span>*이미지 활용 타입</span>
+									<span>버튼태그 btn_</span>
+									<span>아이콘 i_</span>
+									<span>화살표 이전 arr_prev_</span>
+									<span>화살표 다음 arr_next_</span>
+									<span>일반사진 img_</span>
+									<span>배경사진 bg_</span>
+									<span>로고 logo_</span>
+									<span>ex) arr_prev_01.png (O) / arr_next_active_01.png (O) / btn_excel_download_check.png (X)</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="layout">
+				<h3>레이아웃 구조</h3>
+				<div class="list_area">
+					<div class="item">
+						<span class="title">[서비스] 퍼블리싱 레이아웃 구조</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>서비스 퍼블리싱의 경우 시멘틱 마크업은 피합니다.</span>
+									<span>&lt;div class="inner"&gt;&lt;/div&gt;로 감싼 후 마크업 합니다.</span>
+									<span>클래스 inner는 이 때 한번만 사용합니다.</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="title">[서비스] table 만들기</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>테이블 </span>
+								</p>
+								<p class="detail">
+									<img src="./img/img_table.png" alt="테이블">
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<span class="title">[홈페이지] 퍼블리싱 레이아웃 구조</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<p class="description">
+									<span>홈페이지 퍼블리싱의 경우 시멘틱 마크업으로 작성합니다.</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="etc">
+				<h3>기타</h3>
+				<div class="list_area">
+					<div class="item">
+						<span class="title">참고하면 좋은 사이트 모음</span>
+						<div class="content">
+							<div class="cnt_wrap">
+								<dl class="description">
+									<dt>W3School</dt>
+									<dd>웹 관련 css, jquery 등을 배울 수 있는 사이트</dd>
+									<dd><a href="https://www.w3schools.com/" target="_blank">W3Schools 바로가기</a></dd>
+								</dl>
+								<dl class="description">
+									<dt>caniuse</dt>
+									<dd>크로스브라우징 체크 사이트</dd>
+									<dd><a href="https://www.caniuse.com/" target="_blank">caniuse 바로가기</a></dd>
+								</dl>
+								<dl class="description">
+									<dt>널리 NULI</dt>
+									<dd>네이버 널리에서 제공하는 웹 접근성에 대한 기본적인 배경과 가이드라인을 제공하는 사이트</dd>
+									<dd><a href="https://nuli.navercorp.com/" target="_blank">널리 바로가기</a></dd>
+								</dl>
+								<dl class="description">
+									<dt>기기별 구현 확인</dt>
+									<dd>브라우저, 모바일기기 마다 웹 구현을 확인 할 수 있는 사이트</dd>
+									<dd><a href="http://www.responsinator.com/" target="_blank">responsinator 바로가기</a></dd>
+								</dl>
+								<dl class="description">
+									<dt>WSSS</dt>
+									<dd>다양한 CSS 구현 예제 사이트</dd>
+									<dd><a href="https://wsss.tistory.com/" target="_blank">WSSS 바로가기</a></dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<script src="./js/vendor/jquery-1.11.1.min.js"></script>
+	<script src="./js/common.js"></script>
+	<script></script>
+</body>
+</html>

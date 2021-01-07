@@ -1,0 +1,31 @@
+/*퍼블리싱 가이드*/
+
+header{position:fixed;top:0;left:0;right:0;height:100px;background-color:#0050ff;color:#fff}
+header>.wrap{padding:0 20px}
+header h1{font-size:16px;font-weight:500;line-height:100px}
+
+footer{padding:10px 0;background-color:#3e3e3e;color:#d3d3d3}
+footer>.wrap{padding:20px}
+footer>.wrap:after{display:block;clear:both;content:""}
+footer h6{float:left;font-size:12px;font-weight:300}
+footer .site{float:right;font-size:12px;font-weight:300;text-decoration:underline}
+
+.container{padding-top:100px}
+
+.index .top_area{padding:100px 0;background-color:#0050ff}
+.index .top_area .main_cnt{width:1000px;margin:0 auto}
+.index .top_area .main_cnt:after{display:block;clear:both;content:""}
+.index .top_area .main_cnt .text{float:left;padding-top:40px;color:#fff;font-size:50px;font-weight:700;line-height:70px}
+.index .top_area .main_cnt .text>i{display:block}
+.index .top_area .main_cnt .text>.b{color:#ff8914}
+.index .top_area .main_cnt .image{float:right}
+.index .top_area .main_cnt .image>img{width:323px;height:299px}
+.index .cnt_area{padding:50px}
+.index .cnt_area .mid_cnt{padding:30px;background-color:#fff;border-radius:8px}
+.index .cnt_area .mid_cnt .menu{margin-bottom:30px;padding-bottom:30px;border-bottom:1px solid #dedede}
+.index .cnt_area .mid_cnt .menu .tit{font-size:20px;font-weight:500}
+.index .cnt_area .mid_cnt .sub_menu .tit{display:block;padding-bottom:20px;font-size:18px}
+.index .cnt_area .mid_cnt .sub_menu .sub_list>li{position:relative;margin-bottom:10px}
+.index .cnt_area .mid_cnt .sub_menu .sub_list>li:last-child{margin-bottom:0}
+.index .cnt_area .mid_cnt .sub_menu .sub_list>li:before{position:absolute;top:50%;left:20px;width:6px;height:6px;background-color:#3e3e3e;border-radius:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);-moz-transform:translateY(-50%);transform:translateY(-50%);content:""}
+.index .cnt_area .mid_cnt .sub_menu .sub_list>li>a{padding-left:40px}
