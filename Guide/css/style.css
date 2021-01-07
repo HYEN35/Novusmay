@@ -74,3 +74,14 @@ nav>ul>li .sub_menu:hover{background-color:#E7E6E6}
 .sub_page .content .mid_area section .text_cnt table th{width:30%;padding:10px 0;font-weight:500;background-color:#f1f1f1}
 .sub_page .content .mid_area section .text_cnt table td{padding:10px 0}
 .sub_page .content .mid_area section .text_cnt table td>i{display:block;margin:3px 0}
+
+@media all and (max-width:1366px){
+	nav{width:190px}
+	.sub_page{margin-left:191px}
+
+	.index .top_area .main_cnt{width:735px}
+	.index .top_area .main_cnt .text{padding-top:60px;font-size:34px;line-height:50px}
+}
+
+@media all and (max-width:767px){
+}
