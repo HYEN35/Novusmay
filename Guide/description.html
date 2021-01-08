@@ -19,49 +19,18 @@
 	<link rel="stylesheet" type="text/css" href="./css/font.css">
 	<link rel="stylesheet" type="text/css" href="./css/common.css">
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<script src="./js/vendor/includeHTML.js"></script>
 </head>
 <body>
 	<div class="inner">
-		<header>
-			<div class="wrap">
-				<h1><a href="index.html">노버스메이 웹 퍼블리싱 가이드</a></h1>
-			</div>
-		</header>
-		<div class="category">
+		<header include-html="header.html"></header>
+		<div class="category" data-name="description">
 			<ul class="wrap">
 				<li class="item">작업규칙</li>
 				<li class="item">주석</li>
 			</ul>
 		</div>
-		<nav>
-			<ul class="wrap">
-				<li><a href="./setting.html" class="main_menu">기본설정</a></li>
-				<li>
-					<div class="sub_wrap on">
-						<a href="#none" class="main_menu click">작업규칙<i class="i_arr on"></i></a>
-						<ul>
-							<li><a href="./html.html" class="sub_menu">HTML</a></li>
-							<li><a href="./css.html" class="sub_menu">CSS</a></li>
-							<li><a href="./script.html" class="sub_menu">jQuery/javaScript</a></li>
-							<li><a href="./naming.html" class="sub_menu">네이밍</a></li>
-							<li><a href="./description.html" class="sub_menu click">주석</a></li>
-						</ul>
-					</div>
-				</li>
-				<li>
-					<div class="sub_wrap off">
-						<a href="#none" class="main_menu">설계규칙<i class="i_arr off"></i></a>
-						<ul>
-							<li><a href="./service.html" class="sub_menu">서비스</a></li>
-							<li><a href="./homepage.html" class="sub_menu">홈페이지</a></li>
-						</ul>
-					</div>
-				</li>
-				<li><a href="./web.html" class="main_menu">웹 접근성</a></li>
-				<li><a href="./site.html" class="main_menu">Web Site</a></li>
-				<li><a href="./cooperate.html" class="main_menu">업무협업</a></li>
-			</ul>
-		</nav>
+		<nav include-html="nav.html"></nav>
 		<div class="container sub_page description">
 			<div class="wrap">
 				<div class="content">
@@ -77,12 +46,7 @@
 				</div>
 			</div>
 		</div>
-		<footer>
-			<div class="wrap">
-				<h6 class="copyright">Copyright 2021 Novusmay Inc. all rights reserved.</h6>
-				<a href="https://www.novusmay.com" target="_blank" class="site">노버스메이 바로가기</a>
-			</div>
-		</footer>
+		<footer include-html="footer.html"></footer>
 	</div>
 
 	<script src="./js/vendor/jquery-1.12.4.min.js"></script>

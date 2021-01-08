@@ -31,7 +31,20 @@ function includeHTML(callback) {
       return;
     }
   }
-  // setTimeout(function() {
-  //   includeHTML(callback)
-  // }, 0);
+  include_nav_menu();
+}
+
+// include 페이지 로드 후 최초 menu 이벤트 
+function include_nav_menu(){
+  var $this = $('.category').attr('data-name');
+  var $href = $('li>a[href="./'+ $this +'.html"]');
+
+  $href.addClass('click');
+
+  if($href.parents('.sub_wrap')){
+    $href.parents('.sub_wrap').removeClass('off').addClass('on');
+    $('.sub_wrap.on>ul').show();
+    $href.parents('.sub_wrap').children('.main_menu').addClass('click');
+    $href.parents('.sub_wrap').find('.i_arr').removeClass('off').addClass('on');
+  }
 }
