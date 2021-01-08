@@ -1,10 +1,10 @@
 $(function(){
+	includeHTML();
 	menu();
 });
 
 function menu(){
-	$('.sub_wrap.on>ul').show();
-	$('.sub_wrap .main_menu').on('click', function (){
+	$('body').on('click', 'nav .sub_wrap .main_menu' , function (){
 		var $sub_wrap = $(this).parent('.sub_wrap').children('ul');
 
 		$('.main_menu').removeClass('click');
@@ -21,3 +21,4 @@ function menu(){
 		}
 	});
 }
+
