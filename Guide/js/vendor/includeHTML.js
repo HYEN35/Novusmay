@@ -7,7 +7,7 @@ function includeHTML(callback) {
   for (i = 0; i < z.length; i++) {
     elmnt = z[i];
     /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("include-html");
+    file = elmnt.getAttribute("data-html");
     //console.log(file);
     if (file) {
       /*make an HTTP request using the attribute value as the file name:*/
@@ -21,7 +21,7 @@ function includeHTML(callback) {
             elmnt.innerHTML = "Page not found.";
           }
           /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("include-html");
+          elmnt.removeAttribute("data-html");
           includeHTML(callback);
         }
       };
