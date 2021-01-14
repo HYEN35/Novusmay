@@ -166,10 +166,17 @@
 
 		    	if($this == '리뷰'){
 		    		$(e).addClass('click');
-		    		$('.review').show();
+		    		$('.list.review').show();
+		    		// 임시로 추가
+		    		$('.list_bx').append('<li class="list none">게시글이 없습니다.</li>');
+		    		$('.list_bx .none').css({
+		    			'margin-top':'0',
+		    			'padding-top':'0',
+		    			'border-top':'none'
+		    		});
 		    	}else{
 		    		$(e).addClass('click');
-		    		$('.study').show();
+		    		$('.list.study').show();
 		    	}
 		    }
 
