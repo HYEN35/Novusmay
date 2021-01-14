@@ -1,0 +1,32 @@
+/*common*/
+body{position:relative;min-width:320px;font-family:'NotoSans',sans-serif;color:#3e3e3e;font-size:16px;font-weight:300;background-color:#f0f0f0;-ms-user-select:none !important}
+button,
+select{font-family:'NotoSans',sans-serif;font-weight:300}
+button,
+textarea,
+input,
+input[type="text"],
+input[type="password"],
+input[type="button"],
+input[type="reset"],
+input[type="submit"]{font-family:'NotoSans',sans-serif;font-weight:300;font-size:inherit;-webkit-appearance:none;-ms-appearance:none;-moz-appearance:none;appearance:none}
+input::placeholder{color:inherit;font-size:inherit;font-weight:inherit}
+input::-webkit-input-placeholder{color:inherit;font-size:inherit;font-weight:inherit}
+input:-ms-input-placeholder{color:inherit;font-size:inherit;font-weight:inherit}
+input:-moz-placeholder{color:inherit;font-size:inherit;font-weight:inherit}
+textarea::placeholder{color:inherit;font-size:inherit;font-weight:inherit}
+textarea::-webkit-input-placeholder{color:inherit;font-size:inherit;font-weight:inherit}
+textarea:-ms-input-placeholder{color:inherit;font-size:inherit;font-weight:inherit}
+textarea:-moz-placeholder{color:inherit;font-size:inherit;font-weight:inherit}
+
+.en{font-family:'Inter',sans-serif;font-weight:300}
+.gm{font-family:'GmarketSans',sans-serif;font-weight:300}
+.dimmed{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.3);z-index:1500}
+.drag{-webkit-user-select:text !important;-ms-user-select:text !important;-moz-user-select:text !important;user-select:text !important}
+.slt_bx{width:100px;height:32px;margin-right:8px;border:1px solid #d8d8d8;border-radius:3px;box-sizing:border-box;color:#9fa0a1}
+input.txt_bx{width:250px;height:32px;margin-right:8px;padding-left:10px;background-color:#fff;border:1px solid #d8d8d8;border-radius:3px;box-sizing:border-box}
+textarea.txt_bx{display:block;padding:10px;border:1px solid #d8d8d8;border-radius:3px;box-sizing:border-box;resize:none}
+
+/*popup box*/
+.popup{display:none;position:fixed;top:50%;left:50%;width:500px;background-color:#fff;border-radius:3px;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);transform:translate(-50%,-50%);z-index:2000}
+.popup>.pop_wrap{padding:20px}
