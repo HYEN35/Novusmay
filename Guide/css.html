@@ -39,7 +39,129 @@
 					</dl>
 					<div class="mid_area">
 						<section>
-							<h3>작업중</h3>
+							<h3>기본규칙</h3>
+							<div class="text_cnt">
+								<p class="txt">CSS 컨벤션은 <a href="./file/NHN_Coding_Conventions_for_Markup_Languages-v2.75_open.pdf" target="_blank" title="NHN Coding Conventions 다운받기" class="link"><b>NHN Coding Conventions_for_Markup Languages</b></a>을 기준으로 한다.</p>
+								<p class="txt">CSS 작성은 <b>공통 영역 > 마크업 구조</b> 순서로 한다.</p>
+								<p class="txt">한 줄 쓰기로 작성한다.</p>
+								<p class="txt">마지막 세미콜론(;)은 생략한다.</p>
+								<p class="txt">선택자와 중괄호 사이의 공백은 사용하지 않는다.</p>
+								<p class="txt">클래스명이 아닌 태그로 CSS를 선언하는 경우 자식선택자(>)를 사용한다.</p>
+								<p class="txt">CSS 선언 순서를 유의하며 작성한다.</p>
+								<p class="txt">예시</p>
+							</div>
+						</section>
+						<section>
+							<h3>CSS 선언 순서</h3>
+							<div class="text_cnt">
+								<table>
+									<thead>
+										<tr>
+											<th class="num">순서</th>
+											<th>의미</th>
+											<th>대표되는 속성(그룹)</th>
+											<th>관련 속성</th>
+											<th>기타</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="num">1</td>
+											<td>표시</td>
+											<td>display</td>
+											<td>block, inline-block, none</td>
+											<td>-</td>
+										</tr>
+										<tr>
+											<td class="num">2</td>
+											<td>넘침</td>
+											<td>overflow</td>
+											<td>hidden, auto, scroll</td>
+											<td>-</td>
+										</tr>
+										<tr>
+											<td class="num">3</td>
+											<td>흐림</td>
+											<td>float</td>
+											<td>left, right, unset</td>
+											<td>-</td>
+										</tr>
+										<tr>
+											<td class="num">4</td>
+											<td>위치</td>
+											<td>position</td>
+											<td>relative, absolute, fixed, stactic, top, right, bottom, left</td>
+											<td>위치 값 선언할 때 순서 유의하여 작성(top, right, bottom, left)</td>
+										</tr>
+										<tr>
+											<td class="num">5</td>
+											<td>크기</td>
+											<td>width, height, min-width, min-height</td>
+											<td>-</td>
+											<td>-</td>
+										</tr>
+										<tr>
+											<td class="num">6</td>
+											<td>간격</td>
+											<td>margin, padding</td>
+											<td>top, right, bottom, left</td>
+											<td>축약형으로 사용 가능/순서 유의</td>
+										</tr>
+										<tr>
+											<td class="num">7</td>
+											<td>배경</td>
+											<td>background</td>
+											<td>background, background-color, background-size, background-position 등</td>
+											<td>background 축약형으로 사용 가능</td>
+										</tr>
+										<tr>
+											<td class="num">8</td>
+											<td>글자</td>
+											<td>font</td>
+											<td>color, font-size, font-weight, text-align, line-height 등</td>
+											<td>축약형으로 사용 가능/순서 유의</td>
+										</tr>
+										<tr>
+											<td class="num">9</td>
+											<td>테두리</td>
+											<td>border</td>
+											<td>border, border-radius, box-size</td>
+											<td>축약형으로 사용 가능/순서 유의/4면 보더 사용시 꼭 box-size 선언</td>
+										</tr>
+										<tr>
+											<td class="num">10</td>
+											<td>동작</td>
+											<td>animation</td>
+											<td>transform 등</td>
+											<td>-</td>
+										</tr>
+										<tr>
+											<td class="num">11</td>
+											<td>배치</td>
+											<td>z-index</td>
+											<td>-</td>
+											<td>-</td>
+										</tr>
+										<tr>
+											<td class="num">12</td>
+											<td>기타</td>
+											<td>content 등</td>
+											<td>-</td>
+											<td>위에 언급되지 않은 속성들은 동작 속성 이후에 선언하며, 기타 내 속성의 선언 순서는 없다. 자유롭게 작성 가능하다.</td>
+										</tr>
+									</tbody>
+								</table>
+						</section>
+						<section>
+							<h3>공통 CSS</h3>
+							<div class="text_cnt">
+								<p class="txt">공통 CSS는 서비스와 홈페이지 모두 동일한 파일을 사용한다.</p>
+								<p class="txt">공통 CSS 순서</p>
+								<p class="txt_sub">
+									<i>vendor css > reset.css > font.css > common.css</i>
+								</p>
+								<p class="txt">예시</p>
+							</div>
 						</section>
 					</div>
 				</div>
