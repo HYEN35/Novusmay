@@ -84,6 +84,7 @@ nav>ul>li .sub_menu:hover{background-color:#E7E6E6}
 .sub_page .content .mid_area section .text_cnt .txt_sub>i{display:block;position:relative;margin-bottom:10px;padding-left:40px;font-size:14px}
 .sub_page .content .mid_area section .text_cnt .txt_sub>i:before{position:absolute;top:50%;left:30px;content:"-";-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);-moz-transform:translateY(-50%);transform:translateY(-50%)}
 .sub_page .content .mid_area section .text_cnt .link{padding-left:20px;font-size:14px;text-decoration:underline}
+.sub_page .content .mid_area section .text_cnt .txt .link{padding-left:0}
 .sub_page .content .mid_area section .text_cnt table{width:100%;table-layout:fixed;font-size:14px;text-align:center;border:1px solid #dedede;border-radius:4px;box-sizing:border-box}
 .sub_page .content .mid_area section .text_cnt table tr{border-bottom:1px solid #dedede}
 .sub_page .content .mid_area section .text_cnt table th{width:30%;padding:10px 0;font-weight:500;background-color:#f1f1f1}

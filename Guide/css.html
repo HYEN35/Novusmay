@@ -48,6 +48,7 @@
 								<p class="txt">선택자와 중괄호 사이의 공백은 사용하지 않는다.</p>
 								<p class="txt">클래스명이 아닌 태그로 CSS를 선언하는 경우 자식선택자(>)를 사용한다.</p>
 								<p class="txt">CSS 선언 순서를 유의하며 작성한다.</p>
+								<p class="txt">플러그인 CSS는 vendor 폴더에 저장한다.</p>
 								<p class="txt">예시</p>
 							</div>
 						</section>
@@ -140,7 +141,7 @@
 											<td>배치</td>
 											<td>z-index</td>
 											<td>-</td>
-											<td>-</td>
+											<td>dimmed의 z-index를 1500으로 설정하고 이를 기준으로 상황에 맞게 선언</td>
 										</tr>
 										<tr>
 											<td class="num">12</td>
@@ -155,10 +156,33 @@
 						<section>
 							<h3>공통 CSS</h3>
 							<div class="text_cnt">
-								<p class="txt">공통 CSS는 서비스와 홈페이지 모두 동일한 파일을 사용한다.</p>
+								<p class="txt">공통 CSS</p>
+								<p class="txt_sub">
+									<i>reset.css</i>
+									<i>font.css</i>
+								</p>
+								<p class="txt">공통 CSS는 솔루션과 홈페이지 모두 동일한 파일을 사용한다.</p>
+								<p class="txt">common.css는 솔루션 작업할 때 사용한다.</p>
+								<p class="txt_sub">
+									<i>웹 관리자, 사용자, 에이전트 등에서 공통으로 사용되는 css를 common.css에 작성한다.</i>
+									<i>ex) popup, pagenation, button 등</i>
+								</p>
+								<p class="txt">reset.css는 수정하지 않는다.</p>
+								<p class="txt">font.css는 솔루션별 해당하는 폰트만 사용한다.</p>
 								<p class="txt">공통 CSS 순서</p>
 								<p class="txt_sub">
 									<i>vendor css > reset.css > font.css > common.css</i>
+								</p>
+							</div>
+						</section>
+						<section>
+							<h3>벤더프리픽스(Vendor Prefix)</h3>
+							<div class="text_cnt">
+								<p class="txt">익스플로러 구현때문에 벤더프리픽스를 사용한다.</p>
+								<p class="txt">transfome, placeholder에 CSS를 선언하는 경우에만 사용한다.</p>
+								<p class="txt">선언 순서</p>
+								<p class="txt_sub">
+									<i>webkt -> ms -> moz -> o -> 일반</i>
 								</p>
 								<p class="txt">예시</p>
 							</div>
