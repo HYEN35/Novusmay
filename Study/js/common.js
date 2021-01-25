@@ -1,5 +1,6 @@
 $(function(){
 	menu();
+	back_move();
 });
 
 function menu(){
@@ -19,5 +20,11 @@ function menu(){
 			$('.sub_wrap').not($(this).parents('.sub_wrap')).addClass('off').removeClass('on');
 		}
 	});
+}
+
+function back_move(){
+	$('.btn_prev').on('click',function(){
+		window.history.back();
+	})
 }
 
