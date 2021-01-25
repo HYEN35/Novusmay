@@ -14,17 +14,17 @@
 	<meta name="og:site_name" content="노버스메이 웹퍼블리싱 기술 블로그">
 	<meta name="og:description" content="노버스메이 웹퍼블리싱 기술 블로그 페이지입니다.">
 	<meta name="og:image" content="#none">
-	<link rel="shortcut icon" type="image/x-icon" href="./img/favicon.png">
-	<link rel="stylesheet" type="text/css" href="./css/reset.css">
-	<link rel="stylesheet" type="text/css" href="./css/font.css">
-	<link rel="stylesheet" type="text/css" href="./css/common.css">
-	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="shortcut icon" type="image/x-icon" href="../../img/favicon.png">
+	<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../css/font.css">
+	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
 </head>
 <body>
 	<div class="inner">
 		<header>
 			<div class="wrap">
-				<h1><a href="index.html">노버스메이 웹 퍼블리싱 기술 블로그</a></h1>
+				<h1><a href="../../index.html">노버스메이 웹 퍼블리싱 기술 블로그</a></h1>
 			</div>
 		</header>
 		<div class="container tech">
@@ -35,7 +35,7 @@
 							<i>UI Developer's</i>
 							<i class="b">Tech Blog</i>
 						</p>
-						<div class="image"><img src="./img/img_main_01.png" alt="노버스메이 웹퍼블리싱 기술 블로그"></div>
+						<div class="image"><img src="../../img/img_main_01.png" alt="노버스메이 웹퍼블리싱 기술 블로그"></div>
 					</div>
 				</div>
 				<div class="cnt_area">
@@ -44,57 +44,17 @@
 					</div>
 					<div class="cnt_wrap">
 						<div class="nav_cnt">
-							<a class="category" href="../index.html">Category</a>
+							<a class="category" href="../../index.html">Category</a>
 							<ul class="wrap">
-								<li><a class="main_menu review" href="./html/review/index.html">리뷰</a></li>
-								<li><a class="main_menu study" href="./html/study/index.html">스터디</a></li>
-								<li><a class="main_menu web" href="./html/web/index.html">웹 접근성</a></li>
+								<li><a class="main_menu" href="../review/index.html">리뷰</a></li>
+								<li><a class="main_menu click" href="./index.html">스터디</a></li>
+								<li><a class="main_menu" href="../web/index.html">웹 접근성</a></li>
 							</ul>
 						</div>
 						<div class="mid_cnt">
 							<ul class="list_bx">
 								<!-- [D] 페이지 리뷰는 review 클래스 추가 / 스터디는 study 클래스 추가 -->
 								<!-- [D] date-page에 .html을 제외한 페이지명 추가-->
-								<li class="list web" data-page="web_screenreader">
-									<dl>
-										<dt class="title">스크린리더</dt>
-										<dd class="info">
-											<span class="date">2021.00.00</span>
-											<span class="name">-</span>
-										</dd>
-									</dl>
-									<span class="sub_title"></span>
-								</li>
-								<li class="list web" data-page="web_tool">
-									<dl>
-										<dt class="title">웹 접근성 진단 도구</dt>
-										<dd class="info">
-											<span class="date">2021.01.20</span>
-											<span class="name">김수현</span>
-										</dd>
-									</dl>
-									<span class="sub_title">접근성 진단 시 많이 사용하는 몇 가지 진단 도구들</span>
-								</li>
-								<li class="list web" data-page="web_guideline">
-									<dl>
-										<dt class="title">웹 접근성 지침</dt>
-										<dd class="info">
-											<span class="date">2021.01.20</span>
-											<span class="name">김혜인, 김수현</span>
-										</dd>
-									</dl>
-									<span class="sub_title"></span>
-								</li>
-								<li class="list web" data-page="web_accessibility">
-									<dl>
-										<dt class="title">웹 접근성의 이해</dt>
-										<dd class="info">
-											<span class="date">2021.00.00</span>
-											<span class="name">-</span>
-										</dd>
-									</dl>
-									<span class="sub_title"></span>
-								</li>
 								<li class="list study" data-page="scrollmagic">
 									<dl>
 										<dt class="title">Scrollmagic과 tweenMax</dt>
@@ -118,8 +78,8 @@
 		</div>
 	</div>
 
-	<script src="./js/vendor/jquery-1.12.4.min.js"></script>
-	<script src="./js/common.js"></script>
+	<script src="../../js/vendor/jquery-1.12.4.min.js"></script>
+	<script src="../../js/common.js"></script>
 	<script>
 		$(function(){
 				paging(totalData, dataPerPage, pageCount, 1);
@@ -203,56 +163,11 @@
 		        });                                      
 		    }
 
-		    // 좌측 카테고리 nav 클릭 이벤트
-		    function category_click(e){
-		    	var $this = $(e).text();
-
-		    	$('.list').hide();
-		    	$('.main_menu').removeClass('click');
-
-		    	if($this == '리뷰'){
-		    		$(e).addClass('click');
-		    		$('.list.review').show();
-		    		$('.title_cnt .top_title').html('홈페이지 리뷰 목록');
-		    		// 임시로 추가
-		    		$('.list_bx').append('<li class="list none">게시글이 없습니다.</li>');
-		    		$('.list_bx .none').css({
-		    			'margin-top':'0',
-		    			'padding-top':'0',
-		    			'border-top':'none'
-		    		});
-		    	}else if($this == '스터디'){
-		    		$(e).addClass('click');
-		    		$('.list.study').show();
-		    		$('.title_cnt .top_title').html('스터디 컨텐츠 목록');
-		    	}else{
-		    		$(e).addClass('click');
-		    		$('.list.web').show();
-		    		$('.title_cnt .top_title').html('웹 접근성 목록');
-		    	}
-
-		    	var count = $('.list:visible').length;
-
-		    	if(count == 1){
-		    		$('.list+.list').css({
-		    			'margin-top':'0',
-		    			'padding-top':'0',
-		    			'border-top':'none'
-		    		})
-		    	}else{
-		    		$('.list+.list').css({
-		    			'margin-top':'50px',
-		    			'padding-top':'50px',
-		    			'border-top':'1px solid #d5d5d5'
-		    		})
-		    	}
-		    }
-
 		    // 페이지 이동 이벤트
 		    function page_move(){
 		    	$('.list').on('click',function(){
 		    		var $this = $(this).attr('data-page');
-		    		location.href = './html/'+$this+'.html';
+		    		location.href = './'+$this+'.html';
 		    	})
 		    }
 	</script>
