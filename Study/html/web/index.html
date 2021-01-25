@@ -53,21 +53,19 @@
 						</div>
 						<div class="mid_cnt">
 							<ul class="list_bx">
-								<!-- [D] 페이지 리뷰는 review 클래스 추가 / 스터디는 study 클래스 추가 -->
-								<!-- [D] date-page에 .html을 제외한 페이지명 추가-->
-								<li class="list web" data-page="web_screenreader">
+								<li class="list">
 									<dl>
-										<dt class="title">스크린리더</dt>
+										<dt class="title"><a href="./web_screenreader.html">스크린리더</a></dt>
 										<dd class="info">
 											<span class="date">2021.01.23</span>
 											<span class="name">김혜인, 김수현</span>
 										</dd>
 									</dl>
-									<span class="sub_title">OS별 스크린 리더</span>
+									<span class="sub_title">OS별 스크린리더</span>
 								</li>
-								<li class="list web" data-page="web_tool">
+								<li class="list">
 									<dl>
-										<dt class="title">웹 접근성 진단 도구</dt>
+										<dt class="title"><a href="./web_tool.html">웹 접근성 진단 도구</a></dt>
 										<dd class="info">
 											<span class="date">2021.01.20</span>
 											<span class="name">김수현</span>
@@ -75,19 +73,19 @@
 									</dl>
 									<span class="sub_title">접근성 진단 시 많이 사용하는 몇 가지 진단 도구들</span>
 								</li>
-								<li class="list web" data-page="web_guideline">
+								<li class="list">
 									<dl>
-										<dt class="title">웹 접근성 지침</dt>
+										<dt class="title"><a href="./web_guideline.html">웹 접근성 지침</a></dt>
 										<dd class="info">
 											<span class="date">2021.01.20</span>
 											<span class="name">김혜인, 김수현</span>
 										</dd>
 									</dl>
-									<span class="sub_title"></span>
+									<span class="sub_title">웹 접근성 준수를 위한 지침</span>
 								</li>
-								<li class="list web" data-page="web_accessibility">
+								<li class="list">
 									<dl>
-										<dt class="title">웹 접근성의 이해</dt>
+										<dt class="title"><a href="./web_accessibility.html">웹 접근성의 이해</a></dt>
 										<dd class="info">
 											<span class="date">2021.00.00</span>
 											<span class="name">-</span>
@@ -113,7 +111,6 @@
 	<script>
 		$(function(){
 				paging(totalData, dataPerPage, pageCount, 1);
-				page_move();
 			})
 
 			var $list = $('.list_bx>li');
@@ -191,14 +188,6 @@
 
 		        	paging(totalData, dataPerPage, pageCount, selectedPage);
 		        });                                      
-		    }
-
-		    // 페이지 이동 이벤트
-		    function page_move(){
-		    	$('.list').on('click',function(){
-		    		var $this = $(this).attr('data-page');
-		    		location.href = './'+$this+'.html';
-		    	})
 		    }
 	</script>
 </body>

@@ -53,21 +53,19 @@
 						</div>
 						<div class="mid_cnt">
 							<ul class="list_bx">
-								<!-- [D] 페이지 리뷰는 review 클래스 추가 / 스터디는 study 클래스 추가 -->
-								<!-- [D] date-page에 .html을 제외한 페이지명 추가-->
-								<li class="list web" data-page="web_screenreader">
+								<li class="list">
 									<dl>
-										<dt class="title">스크린리더</dt>
+										<dt class="title"><a href="./html/web/web_screenreader.html">스크린리더</a></dt>
 										<dd class="info">
-											<span class="date">2021.00.00</span>
-											<span class="name">-</span>
+											<span class="date">2021.01.23</span>
+											<span class="name">김혜인, 김수현</span>
 										</dd>
 									</dl>
-									<span class="sub_title"></span>
+									<span class="sub_title">OS별 스크린리더</span>
 								</li>
-								<li class="list web" data-page="web_tool">
+								<li class="list">
 									<dl>
-										<dt class="title">웹 접근성 진단 도구</dt>
+										<dt class="title"><a href="./html/web/web_tool.html">웹 접근성 진단 도구</a></dt>
 										<dd class="info">
 											<span class="date">2021.01.20</span>
 											<span class="name">김수현</span>
@@ -75,19 +73,19 @@
 									</dl>
 									<span class="sub_title">접근성 진단 시 많이 사용하는 몇 가지 진단 도구들</span>
 								</li>
-								<li class="list web" data-page="web_guideline">
+								<li class="list">
 									<dl>
-										<dt class="title">웹 접근성 지침</dt>
+										<dt class="title"><a href="./html/web/web_guideline.html">웹 접근성 지침</a></dt>
 										<dd class="info">
 											<span class="date">2021.01.20</span>
 											<span class="name">김혜인, 김수현</span>
 										</dd>
 									</dl>
-									<span class="sub_title"></span>
+									<span class="sub_title">웹 접근성 준수를 위한 지침</span>
 								</li>
-								<li class="list web" data-page="web_accessibility">
+								<li class="list">
 									<dl>
-										<dt class="title">웹 접근성의 이해</dt>
+										<dt class="title"><a href="./html/web/web_accessibility.html">웹 접근성의 이해</a></dt>
 										<dd class="info">
 											<span class="date">2021.00.00</span>
 											<span class="name">-</span>
@@ -95,9 +93,9 @@
 									</dl>
 									<span class="sub_title"></span>
 								</li>
-								<li class="list study" data-page="scrollmagic">
+								<li class="list">
 									<dl>
-										<dt class="title">Scrollmagic과 tweenMax</dt>
+										<dt class="title"><a href="./html/study/scrollmagic.html">Scrollmagic과 tweenMax</a></dt>
 										<dd class="info">
 											<span class="date">2021.01.14</span>
 											<span class="name">김수현</span>
@@ -123,7 +121,6 @@
 	<script>
 		$(function(){
 				paging(totalData, dataPerPage, pageCount, 1);
-				page_move();
 			})
 
 			var $list = $('.list_bx>li');
@@ -201,59 +198,6 @@
 
 		        	paging(totalData, dataPerPage, pageCount, selectedPage);
 		        });                                      
-		    }
-
-		    // 좌측 카테고리 nav 클릭 이벤트
-		    function category_click(e){
-		    	var $this = $(e).text();
-
-		    	$('.list').hide();
-		    	$('.main_menu').removeClass('click');
-
-		    	if($this == '리뷰'){
-		    		$(e).addClass('click');
-		    		$('.list.review').show();
-		    		$('.title_cnt .top_title').html('홈페이지 리뷰 목록');
-		    		// 임시로 추가
-		    		$('.list_bx').append('<li class="list none">게시글이 없습니다.</li>');
-		    		$('.list_bx .none').css({
-		    			'margin-top':'0',
-		    			'padding-top':'0',
-		    			'border-top':'none'
-		    		});
-		    	}else if($this == '스터디'){
-		    		$(e).addClass('click');
-		    		$('.list.study').show();
-		    		$('.title_cnt .top_title').html('스터디 컨텐츠 목록');
-		    	}else{
-		    		$(e).addClass('click');
-		    		$('.list.web').show();
-		    		$('.title_cnt .top_title').html('웹 접근성 목록');
-		    	}
-
-		    	var count = $('.list:visible').length;
-
-		    	if(count == 1){
-		    		$('.list+.list').css({
-		    			'margin-top':'0',
-		    			'padding-top':'0',
-		    			'border-top':'none'
-		    		})
-		    	}else{
-		    		$('.list+.list').css({
-		    			'margin-top':'50px',
-		    			'padding-top':'50px',
-		    			'border-top':'1px solid #d5d5d5'
-		    		})
-		    	}
-		    }
-
-		    // 페이지 이동 이벤트
-		    function page_move(){
-		    	$('.list').on('click',function(){
-		    		var $this = $(this).attr('data-page');
-		    		location.href = './html/'+$this+'.html';
-		    	})
 		    }
 	</script>
 </body>

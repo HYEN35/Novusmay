@@ -74,7 +74,6 @@
 	<script>
 		$(function(){
 				paging(totalData, dataPerPage, pageCount, 1);
-				page_move();
 			})
 
 			var $list = $('.list_bx>li');
@@ -152,14 +151,6 @@
 
 		        	paging(totalData, dataPerPage, pageCount, selectedPage);
 		        });                                      
-		    }
-
-		    // 페이지 이동 이벤트
-		    function page_move(){
-		    	$('.list').on('click',function(){
-		    		var $this = $(this).attr('data-page');
-		    		location.href = './'+$this+'.html';
-		    	})
 		    }
 	</script>
 </body>

@@ -53,11 +53,9 @@
 						</div>
 						<div class="mid_cnt">
 							<ul class="list_bx">
-								<!-- [D] 페이지 리뷰는 review 클래스 추가 / 스터디는 study 클래스 추가 -->
-								<!-- [D] date-page에 .html을 제외한 페이지명 추가-->
-								<li class="list study" data-page="scrollmagic">
+								<li class="list">
 									<dl>
-										<dt class="title">Scrollmagic과 tweenMax</dt>
+										<dt class="title"><a href="./html/study/scrollmagic.html">Scrollmagic과 tweenMax</a></dt>
 										<dd class="info">
 											<span class="date">2021.01.14</span>
 											<span class="name">김수현</span>
@@ -83,7 +81,6 @@
 	<script>
 		$(function(){
 				paging(totalData, dataPerPage, pageCount, 1);
-				page_move();
 			})
 
 			var $list = $('.list_bx>li');
@@ -161,14 +158,6 @@
 
 		        	paging(totalData, dataPerPage, pageCount, selectedPage);
 		        });                                      
-		    }
-
-		    // 페이지 이동 이벤트
-		    function page_move(){
-		    	$('.list').on('click',function(){
-		    		var $this = $(this).attr('data-page');
-		    		location.href = './'+$this+'.html';
-		    	})
 		    }
 	</script>
 </body>
