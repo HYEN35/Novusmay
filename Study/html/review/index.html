@@ -14,17 +14,17 @@
 	<meta name="og:site_name" content="노버스메이 웹퍼블리싱 기술 블로그">
 	<meta name="og:description" content="노버스메이 웹퍼블리싱 기술 블로그 페이지입니다.">
 	<meta name="og:image" content="#none">
-	<link rel="shortcut icon" type="image/x-icon" href="./img/favicon.png">
-	<link rel="stylesheet" type="text/css" href="./css/reset.css">
-	<link rel="stylesheet" type="text/css" href="./css/font.css">
-	<link rel="stylesheet" type="text/css" href="./css/common.css">
-	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="shortcut icon" type="image/x-icon" href="../../img/favicon.png">
+	<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../css/font.css">
+	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
 </head>
 <body>
 	<div class="inner">
 		<header>
 			<div class="wrap">
-				<h1><a href="index.html">노버스메이 웹 퍼블리싱 기술 블로그</a></h1>
+				<h1><a href="../../index.html">노버스메이 웹 퍼블리싱 기술 블로그</a></h1>
 			</div>
 		</header>
 		<div class="container tech">
@@ -35,74 +35,27 @@
 							<i>UI Developer's</i>
 							<i class="b">Tech Blog</i>
 						</p>
-						<div class="image"><img src="./img/img_main_01.png" alt="노버스메이 웹퍼블리싱 기술 블로그"></div>
+						<div class="image"><img src="../../img/img_main_01.png" alt="노버스메이 웹퍼블리싱 기술 블로그"></div>
 					</div>
 				</div>
 				<div class="cnt_area">
 					<div class="title_cnt">
-						<span class="top_title">모든 카테고리 글 목록</span>
+						<span class="top_title">페이지 리뷰 글 목록</span>
 					</div>
 					<div class="cnt_wrap">
 						<div class="nav_cnt">
-							<a class="category" href="../index.html">Category</a>
+							<a class="category" href="../../index.html">Category</a>
 							<ul class="wrap">
-								<li><a class="main_menu review" href="./html/review/index.html">리뷰</a></li>
-								<li><a class="main_menu study" href="./html/study/index.html">스터디</a></li>
-								<li><a class="main_menu web" href="./html/web/index.html">웹 접근성</a></li>
+								<li><a class="main_menu click" href="./index.html">리뷰</a></li>
+								<li><a class="main_menu" href="../study/index.html">스터디</a></li>
+								<li><a class="main_menu" href="../web/index.html">웹 접근성</a></li>
 							</ul>
 						</div>
 						<div class="mid_cnt">
 							<ul class="list_bx">
-								<li class="list">
-									<dl>
-										<dt class="title"><a href="./html/web/web_screenreader.html">스크린리더</a></dt>
-										<dd class="info">
-											<span class="date">2021.01.23</span>
-											<span class="name">김혜인, 김수현</span>
-										</dd>
-									</dl>
-									<span class="sub_title">OS별 스크린리더</span>
-								</li>
-								<li class="list">
-									<dl>
-										<dt class="title"><a href="./html/web/web_tool.html">웹 접근성 진단 도구</a></dt>
-										<dd class="info">
-											<span class="date">2021.01.20</span>
-											<span class="name">김수현</span>
-										</dd>
-									</dl>
-									<span class="sub_title">접근성 진단 시 많이 사용하는 몇 가지 진단 도구들</span>
-								</li>
-								<li class="list">
-									<dl>
-										<dt class="title"><a href="./html/web/web_guideline.html">웹 접근성 지침</a></dt>
-										<dd class="info">
-											<span class="date">2021.01.20</span>
-											<span class="name">김혜인, 김수현</span>
-										</dd>
-									</dl>
-									<span class="sub_title">웹 접근성 준수를 위한 지침</span>
-								</li>
-								<li class="list">
-									<dl>
-										<dt class="title"><a href="./html/web/web_accessibility.html">웹 접근성의 이해</a></dt>
-										<dd class="info">
-											<span class="date">2021.00.00</span>
-											<span class="name">-</span>
-										</dd>
-									</dl>
-									<span class="sub_title"></span>
-								</li>
-								<li class="list">
-									<dl>
-										<dt class="title"><a href="./html/study/scrollmagic.html">Scrollmagic과 tweenMax</a></dt>
-										<dd class="info">
-											<span class="date">2021.01.14</span>
-											<span class="name">김수현</span>
-										</dd>
-									</dl>
-									<span class="sub_title">사용자의 스크롤 위치에 따라 반응하는 인터랙션 효과</span>
-								</li>
+								<!-- [D] 페이지 리뷰는 review 클래스 추가 / 스터디는 study 클래스 추가 -->
+								<!-- [D] date-page에 .html을 제외한 페이지명 추가-->
+								<li><span>작성한 글이 없습니다.</span></li>
 							</ul>
 							<div class="page_btn">
 								<div class="p_wrap">
@@ -116,8 +69,8 @@
 		</div>
 	</div>
 
-	<script src="./js/vendor/jquery-1.12.4.min.js"></script>
-	<script src="./js/common.js"></script>
+	<script src="../../js/vendor/jquery-1.12.4.min.js"></script>
+	<script src="../../js/common.js"></script>
 	<script>
 		$(function(){
 				paging(totalData, dataPerPage, pageCount, 1);
