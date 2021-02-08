@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>다양한 css 기술 | 노버스메이 웹 퍼블리싱 기술 블로그</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=0.1,maximum-scale=1,user-scalable=yes,viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="title" content="노버스메이 웹퍼블리싱 기술 블로그">
+	<meta name="description" content="노버스메이 웹퍼블리싱 기술 블로그 페이지입니다.">
+	<meta name="keywords" content="웹퍼블리싱,웹퍼블리싱기술 블로그,기술 블로그">
+	<meta name="author" content="khi">
+	<meta name="og:title" content="노버스메이 웹퍼블리싱 기술 블로그">
+	<meta name="og:url" content="www.novusmay.com">
+	<meta name="og:site_name" content="노버스메이 웹퍼블리싱 기술 블로그">
+	<meta name="og:description" content="노버스메이 웹퍼블리싱 기술 블로그 페이지입니다.">
+	<meta name="og:image" content="#none">
+	<link rel="shortcut icon" type="image/x-icon" href="../../img/favicon.png">
+	<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../css/font.css">
+	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+	<div class="inner">
+		<header>
+			<div class="wrap">
+				<h1><a href="../../index.html">노버스메이 웹 퍼블리싱 기술 블로그</a></h1>
+			</div>
+		</header>
+		<div class="container sub css_tech">
+			<div class="wrap">
+				<div class="cnt_area">
+					<div class="area_wrap">
+						<div class="top_cnt">
+							<button type="button" class="btn_prev"></button>
+							<dl>
+								<dt class="title">다양한 CSS 기술들</dt>
+								<dd class="info">
+									<span class="date">2021.02.08</span>
+									<span class="name">김혜인</span>
+								</dd>
+							</dl>
+						</div>
+						<div class="mid_cnt">
+							<div class="txt_bx">
+								<div>
+									<dl>
+										<dt>1. display:table, display:table-cell, vertical-align:middle을 사용하여 컨텐츠 수직 정렬 하기</dt>
+										<dd>
+											<span>
+												<span>- 수직 정렬하려는 컨텐츠에 <b>display:table-cell</b>과 <b>vertical-align:middle</b> 속성을 추가 한 뒤 <b>부모 컨텐츠에 display:table 속성을 추가</b>하면 수직 정렬이 가능하다.</span>
+											</span>
+										</dd>
+									</dl>
+									<dl>
+										<dt>2. float된 컨텐츠 가운데 정렬하기</dt>
+										<dd>
+											<span>
+												<span>- float된 컨텐츠를 가운데 정렬 할 때는 <b>display:inline-block, text-align:center</b> 속성을 사용한다.</span>
+												<span>- float된 컨텐츠의 <b>부모에게 display:inline-block 속성을 추가</b> 한 뒤, <b>inline-block 된 부모에게 text-align:center 속성을 추가</b>한다.</span>
+												<span>- inline-block 속성을 사용하게 되면 4px정도의 여백이 생긴다. 이 때 text-align:center 속성이 추가된 컨텐츠에 높이값을 주거나 font-size:0을 선언하면 여백이 사라진다.</span>
+												<span>- height의 값이 고정값이면 height 값을 사용하고, height 값이 유동적으로 변경되어야 하는 경우에는 font-size:0을 사용한다.</span>
+											</span>
+										</dd>
+									</dl>
+									<dl class="exam">
+										<dt>예시화면</dt>
+										<dd>
+											<ul>
+												<li>
+													<span>
+														<i>컨텐츠 예시 1-1</i>
+														<i>컨텐츠 예시 1-2</i>
+														<i>컨텐츠 예시 1-3</i>
+													</span>
+												</li>
+												<li><span>컨텐츠 예시 2</span></li>
+												<li><span>컨텐츠 예시 3</span></li>
+											</ul>
+										</dd>
+										<dd>
+											<img src="../../img/study/css_tech_01.png" alt="vertical-align:middle, float 가운데 정렬 예시 화면">
+										</dd>
+									</dl>
+								</div>
+								<div>
+									<dl>
+										<dt>3. vw, vh, calc</dt>
+										<dd>
+											<span>
+												<span><b>vw = viewport width</b></span>
+												<span><b>vh = viewport height</b></span>
+												<span><b>1vw = 뷰포트 너비의 1%</b></span>
+												<span><b>1vh = 뷰포트 높이의 1%</b></span>
+												<span>- <b>vw, vh</b>는 실행중인 브라우저의 크기에 맞춰 그 크기를 <b>유동적으로 맞추겠다</b>는 의미이다.</span>
+												<span>- 다양한 브라우저 크기에 대응할 수 있기때문에 반응형 사이트에서 유용하게 사용된다.</span>
+												<br>
+												<span><b>calc = calculate</b></span>
+												<span>- calc은 속성값을 사칙연산으로 계산 할 수 있게 하는 속성이다.</span>
+												<span>- 컨텐츠의 높이를 브라우저에 따라 유동적으로 맞추기때문에 calc 속성과 같이 쓰인다.</span>
+											</span>
+										</dd>
+										<dl class="exam">
+											<dt>예시화면</dt>
+											<dd>
+												<img src="../../img/study/css_tech_02.png" alt="vw, vh, calc 예시 화면">
+												<img src="../../img/study/css_tech_03.png" alt="vw, vh, calc css 예시 화면">
+											</dd>
+										</dl>
+									</dl>
+								</div>
+								<div>
+									<dl>
+										<dt>4. 아이폰 노치 대응하기</dt>
+										<dd>
+											<span>
+												<span><b>아이폰 노치란?</b></span>
+												<span>- 아이폰 X부터 추가된 영역으로, Safe-area라고 불린며, 상/하단에 여백이 생기는 것을 말한다.</span>
+												<span>- 아이폰 노치는 별도의 속성값으로 대응해줘야 한다.</span>
+												<span>- 별도의 속성값을 추가하지 않으면 노치영역에서 레이아웃이 겹치거나 잘리는 현상이 발생한다.</span>
+												<span>- 보통 body에 env(), constant()를 추가하고 하단 네비버튼에 추가한다.</span>
+												<br>
+												<span><b>속성 적용하기</b></span>
+												<span>1. 뷰포트 메타태그에 viewport-fit:cover를 추가한다.</span>
+												<span>2. body에 env(), constant() 속성 추가한다.</span>
+											</span>
+										</dd>
+										<dl class="exam">
+											<dt>예시화면</dt>
+											<dd>
+												<img src="../../img/study/css_tech_04.png" alt="아이폰 노치 예시 화면">
+											</dd>
+										</dl>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="../../js/vendor/jquery-1.12.4.min.js"></script>
+	<script src="../../js/common.js"></script>
+	<script>
+	</script>
+</body>
+</html>
