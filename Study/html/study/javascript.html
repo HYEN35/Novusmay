@@ -86,11 +86,53 @@
 											<p>/**/ : 여러 줄 주석</p>
 										</dd>
 									</dl>
-									<dl>
+									<dl class="dom">
 										<dt>3. DOM</dt>
 										<dd>
-											<p>문서 객체 모델(DOM, Document Object Model)은 XML, HTML 문서의 프로그래밍 인터페이스로 문서의 구조화된 표현을 제공하며 프로그래밍 언어가 DOM구조에 접근할 수 있는 방법을 제공하여 문서 구조, 스타일, 내용 등을 변경할 수 있게 돕는다. object(nodes , property, method)로 문서를 표현한다.</p>
-											<p></p>
+											<p>문서 객체 모델(DOM, Document Object Model)은 XML, HTML 문서의 프로그래밍 인터페이스로 문서의 구조화된 표현을 제공하며 프로그래밍 언어가 DOM구조에 접근할 수 있는 방법을 제공하여 문서 구조, 스타일, 내용 등을 변경할 수 있게 돕는다. object(nodes , property, method)로 문서를 표현한다.<br><br></p>
+											<p>· DOM 요소 선택 방법</p>
+											<div class="table">
+												<div class="head">
+													<table>
+														<thead>
+															<tr>
+																<th>DOM 요소 선택 방법</th>
+																<th>예시</th>
+															</tr>
+														</thead>
+													</table>
+												</div>
+												<div class="body">
+													<table>
+														<tbody>
+															<tr>
+																<td>HTML 태그 이름(tag name)을 이용한 선택</td>
+																<td>document.getElementsByTagName('li')</td>
+															</tr>
+															<tr>
+																<td>아이디(id)를 이용한 선택</td>
+																<td>document.getElementById('item')</td>
+															</tr>
+															<tr>
+																<td>클래스(class)를 이용한 선택</td>
+																<td>document.getElementsByClassName('item_bx')</td>
+															</tr>
+															<tr>
+																<td>name 속성(attribute)를 이용한 선택</td>
+																<td>document.getElementsByName('check')</td>
+															</tr>
+															<tr>
+																<td>CSS 선택자(selector)를 이용한 선택</td>
+																<td>document.querySelectorAll("li.item")</td>
+															</tr>
+															<tr>
+																<td>HTML 객체 집합(object collection)을 이용한 선택</td>
+																<td>document.title // 타이틀 태그 요소 선택함</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
 										</dd>
 									</dl>
 								</div>
