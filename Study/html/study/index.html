@@ -55,6 +55,16 @@
 							<ul class="list_bx">
 								<li class="list">
 									<dl>
+										<dt class="title"><a href="./css_tech.html">다양한 CSS 기술들</a></dt>
+										<dd class="info">
+											<span class="date">2021.02.08</span>
+											<span class="name">김혜인</span>
+										</dd>
+									</dl>
+									<span class="sub_title">알아두면 좋은 CSS 기술들</span>
+								</li>
+								<li class="list">
+									<dl>
 										<dt class="title"><a href="./scrollmagic.html">Scrollmagic과 tweenMax</a></dt>
 										<dd class="info">
 											<span class="date">2021.01.14</span>
@@ -86,12 +96,12 @@
 			var $list = $('.list_bx>li');
 			var totalData = $list.length;    // 총 데이터 수
 		    var dataPerPage = 5;    // 한 페이지에 나타낼 데이터 수
-		    var pageCount = 5;        // 한 화면에 나타낼 페이지 수 
+		    var pageCount = 5;        // 한 화면에 나타낼 페이지 수
 
 		    function paging(totalData, dataPerPage, pageCount, currentPage){
 
 		        var totalPage = Math.ceil(totalData/dataPerPage);    // 총 페이지 수
-		        var pageGroup = Math.ceil(currentPage/pageCount);    // 페이지 그룹  
+		        var pageGroup = Math.ceil(currentPage/pageCount);    // 페이지 그룹
 		        var last = pageGroup * pageCount;    // 화면에 보여질 마지막 페이지 번호
 		        if(last > totalPage)
 		        	last = totalPage;
@@ -101,7 +111,7 @@
 		        var start = (currentPage-1) * dataPerPage;
 		        var $pingingView = $(".pagination");
 		        var html = "";
-		        
+
 		        /*prev 버튼*/
 		        html += "<li class='prev'><button type='button' class='btn'></button></li> ";
 
@@ -114,10 +124,10 @@
 		        		html += "<li class=" + i + ">" + i + "</li> ";
 		        	}
 		        }
-		        
+
 		        /*next 버튼*/
 		        html += "<li class='next'><button type='button' class='btn active'></button></li>";
-		       
+
 		        $(".pagination").html(html);    // 페이지네이션 목록 생성
 		        $('.pagination>li.'+currentPage).addClass('click');
 
@@ -147,7 +157,7 @@
 		        	$('.pagination>li').removeClass('click');
 		        	$(this).addClass('click');
 
-		        	if($class == "next")    selectedPage = currentPage+1;	
+		        	if($class == "next")    selectedPage = currentPage+1;
 		        	if($class == "prev")    selectedPage = currentPage-1;
 
 			        if(selectedPage < 1){
@@ -157,7 +167,7 @@
 			      	}
 
 		        	paging(totalData, dataPerPage, pageCount, selectedPage);
-		        });                                      
+		        });
 		    }
 	</script>
 </body>
