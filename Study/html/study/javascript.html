@@ -71,7 +71,7 @@
 											<p>- 대소문자 구분</p>
 											<p>· 변수</p>
 											<p>자바스크립트에는 변수형(int, double, string)이 존재하지 않는다. <b>var</b> 이라는 가변형 변수만 존재하여 초기화 할때 형태에 따라서 알아서 할당된다.</p>
-											<p>최신 자바스크립트에선 <b>let</b>이라는 블럭 지역 변수를 제공하고 있다.</p>
+											<p>최신 자바스크립트에선 <b>let</b>이라는 블럭 지역 변수를 제공하고 있다.<br><br></p>
 											<div class="table">
 												<div class="head">
 													<table>
@@ -86,14 +86,28 @@
 													</table>
 												</div>
 												<div class="body">
-													<tbody>
-														<tr>
-															<td></td>
-															<td></td>
-															<td></td>
-															<td></td>
-														</tr>
-													</tbody>
+													<table>
+														<tbody>
+															<tr>
+																<td>재할당</td>
+																<td>○</td>
+																<td>○</td>
+																<td>X</td>
+															</tr>
+															<tr>
+																<td>최초 초기화 후 값 변경</td>
+																<td>○</td>
+																<td>○</td>
+																<td>X</td>
+															</tr>
+															<tr>
+																<td>scope</td>
+																<td>function-scoped(함수 단위)<br>globlly-scoped(전역단위)</td>
+																<td>block-scoped(블록 단위)</td>
+																<td>block-scoped(블록 단위)</td>
+															</tr>
+														</tbody>
+													</table>
 												</div>
 											</div>
 											<p>· 식별자</p>
