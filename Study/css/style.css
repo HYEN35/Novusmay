@@ -162,3 +162,7 @@ footer .site:last-child{margin-right:0}
 .css_tech .exam>dd>img+img{margin-top:15px}
 
 .javascript .cnt_area .mid_cnt .basic .table .body{height:155px}
+
+.js_motion .cnt_area .mid_cnt .motion .img_bx{width:600px}
+.js_motion .cnt_area .mid_cnt .motion .img_bx>img{max-width:100%;max-height:100%}
+.js_motion .cnt_area .mid_cnt .motion>dd>span{color:#d8d8d8;font-size:12px}
