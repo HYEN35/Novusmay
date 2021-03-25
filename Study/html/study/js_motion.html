@@ -44,8 +44,19 @@
 						<div class="mid_cnt">
 							<div class="txt_bx">
 								<div>
+									<dl class="runtime">
+										<dt>1. 런타임(런타임 환경)</dt>
+										<dd>
+											<p>: 프로그래밍 언어가 구동되는 환경. 자바스크립트 런타임환경은 프로그램에 실행동안 사용 가능한 내장된 라이브러리를 제공</p>
+											<p><b>* 자바스크립트 런타임 구성</b></p>
+											<p>자바스크립트 엔진 / Web API / 콜백큐 / 이벤트루프 / 렌더큐</p>
+										</dd>
+										<dd class="img_bx">
+											<img src="../../img/study/motion_02.png" alt="자바스크립트 런타임">
+										</dd>
+									</dl>
 									<dl>
-										<dt>자바스크립트 엔진</dt>
+										<dt>1-1. Javascript engine</dt>
 										<dd>
 											<p>: 자바스크립트 코드를 실행하는 프로그램 혹은 인터프리터. <b>메모리 힙(Memory Heap)</b> + <b>콜 스택(Call Stack)</b></p>
 											<p>* <b>메모리 힙(Memory Heap)</b> : 메모리 할당이 일어나는 곳, 선언한 변수, 함수 등이 담김</p>
@@ -54,14 +65,26 @@
 										</dd>
 									</dl>
 									<dl>
-										<dt>런타임(런타임 환경)</dt>
+										<dt>1-2. Web API</dt>
 										<dd>
-											<p>: 프로그래밍 언어가 구동되는 환경</p>
-											<p>자바스크립트 런타임환경은 프로그램에 실행동안 사용 가능한 내장된 라이브러리를 제공</p>
+											<p>: 자바스크립트 엔진에서 정의되지 않았던 setTimeout / Http 요청 메서드 / DOM 이벤트 등의 메서드 지원.</p>
+											<p>CallStack에서 실행된 비동기 함수는 Web API를 호출하고, Web API는 콜백 함수를 Task Queue에 넣는다.</p>
+										</dd>
+									</dl>
+									<dl>
+										<dt>1-3. Task Queue</dt>
+										<dd>
+											<p>: 실행이 필요한 작업 아이템을 지니고 있는 큐. Web API에서 넘겨받은 Callback 함수를 큐 형태로 저장한다.</p>
+										</dd>
+									</dl>
+									<dl>
+										<dt>1-4. Event Loop</dt>
+										<dd>
+											<p>: CallStack과 Task Queue를 관찰하는 역할. Event Loop는 CallStack과 Task Queue의 상태를 체크하여, CallStack이 비어 있을 때, Task Queue의 첫번째 콜백을 CallStack에 쌓는다.</p>
 										</dd>
 									</dl>
 									<dl class="motion">
-										<dt>동작원리</dt>
+										<dt>2. 동작원리</dt>
 										<dd>
 											<div class="img_bx">
 												<img src="../../img/study/motion_01.gif" alt="동작원리">
