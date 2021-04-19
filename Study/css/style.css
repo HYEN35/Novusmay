@@ -163,12 +163,12 @@ footer .site:last-child{margin-right:0}
 .css_tech .exam>dd>img+img{margin-top:15px}
 
 .javascript .cnt_area .mid_cnt .basic .table{border-top:1px solid #7c7c7c;border-bottom:1px solid #7c7c7c;box-sizing:border-box}
-.javascript .cnt_area .mid_cnt .basic .table .body{height:155px}
+.javascript .cnt_area .mid_cnt .basic .table .body{overflow-y:initial;height:151px}
 .javascript .cnt_area .mid_cnt .basic .table .head>table>thead>tr>th,
 .javascript .cnt_area .mid_cnt .basic .table .body>table>tbody>tr>td{border-right:1px solid #7c7c7c;box-sizing:border-box}
 .javascript .cnt_area .mid_cnt .basic .table .head>table>thead>tr>th,
 .javascript .cnt_area .mid_cnt .basic .table .body>table>tbody>tr>td:last-child(){border-right:none}
-.javascript .cnt_area .mid_cnt .basic .table .head>table>thead>tr>th.list{border-bottom:none}
+.javascript .cnt_area .mid_cnt .basic .table .body>table>tbody>tr:last-child(){border-bottom:none}
 
 .js_motion .cnt_area .mid_cnt .runtime .img_bx{width:600px}
 .js_motion .cnt_area .mid_cnt .runtime .img_bx>img{max-width:100%;max-height:100%}
