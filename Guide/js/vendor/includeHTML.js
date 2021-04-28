@@ -34,7 +34,7 @@ function includeHTML(callback) {
   include_nav_menu();
 }
 
-// include 페이지 로드 후 최초 menu 이벤트 
+// include 페이지 로드 후 최초 menu 이벤트
 function include_nav_menu(){
   var $this = $('.category').attr('data-name');
   var $href = $('li>a[href="./'+ $this +'.html"]');
@@ -47,4 +47,5 @@ function include_nav_menu(){
     $href.parents('.sub_wrap').children('.main_menu').addClass('click');
     $href.parents('.sub_wrap').find('.i_arr').removeClass('off').addClass('on');
   }
+  console.log($href);
 }
