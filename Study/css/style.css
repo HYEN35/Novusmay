@@ -27,6 +27,23 @@ footer .site:last-child{margin-right:0}
 
 .container{padding-top:100px}
 .cnt_area{width:1000px;margin:0 auto;padding:50px}
+/*table*/
+.table>div>table{width:100%;text-align:center;table-layout:fixed}
+.table>div>table>thead>tr,
+.table>div>table>tbody>tr{height:50px}
+.table .head{border-bottom:1px solid #7c7c7c;box-sizing:border-box}
+.table .head.empty{padding-right:17px}
+.table .head>table>thead>tr>th{font-weight:500}
+.table .body{overflow-y:auto;height:320px;background-color:#fff}
+.table .body>table>tbody{font-weight:300}
+.table .body>table>tbody>tr{border-bottom:1px solid #e5e5e5;box-sizing:border-box}
+.table .body>table>tbody>tr>td>[class^='btn_']{min-width:unset;height:auto;padding:0}
+.table .body>table>tbody>tr>td>[class^='btn_i_']{min-width:unset;width:24px;height:24px;padding:0}
+.table>div>table>thead>tr>th.hide,
+.table>div>table>tbody>tr>td.hide{display:none}
+.table>div>table>thead>tr>th.list,
+.table>div>table>tbody>tr>td.list{width:20%;background-color:#7c7c7c;color:#fff}
+.table>div>table>thead>tr>th.list{border-bottom:1px solid #e5e5e5}
 
 /*study*/
 .tech .top_area{padding:100px 0;background-color:#0050ff}
@@ -43,7 +60,8 @@ footer .site:last-child{margin-right:0}
 .tech .cnt_area .cnt_wrap{margin-top:20px}
 .tech .cnt_area .mid_cnt{float:left;width:calc(100% - 340px);margin-left:30px;padding:30px;background-color:#fff;border-radius:8px}
 .tech .cnt_area .mid_cnt .list_bx{margin-top:20px}
-.tech .cnt_area .mid_cnt .list_bx .list+.list{margin-top:50px;padding-top:50px;border-top:1px solid #d5d5d5;box-sizing:border-box}
+.tech .cnt_area .mid_cnt .list_bx .list{margin-bottom:50px;padding-bottom:50px;border-bottom:1px solid #d5d5d5;box-sizing:border-box}
+.tech .cnt_area .mid_cnt .list_bx .last{margin-bottom:0;padding-bottom:0;border:none}
 .tech .cnt_area .mid_cnt .list_bx .list>dl:after{display:block;clear:both;content:""}
 .tech .cnt_area .mid_cnt .list_bx .list>dl .title{position:relative;float:left;font-size:25px;font-weight:700}
 .tech .cnt_area .mid_cnt .list_bx .list>dl .title:before{position:absolute;top:10px;right:-15px;width:1px;height:20px;background-color:#d5d5d5;content:""}
@@ -117,7 +135,6 @@ footer .site:last-child{margin-right:0}
 .sub .cnt_area .top_cnt>dl .info>span{float:left}
 .sub .cnt_area .top_cnt>dl .info>span+span{margin-left:10px}
 .sub .cnt_area .mid_cnt{margin-top:20px;padding-top:20px;border-top:1px solid #d5d5d5}
-.sub .mid_cnt .txt_bx>div+div{margin-top:30px}
 .sub .mid_cnt .txt_bx>div>dl+dl{margin-top:30px}
 .sub .mid_cnt .txt_bx>div>dl>dt{font-size:18px;font-weight:500}
 .sub .mid_cnt .txt_bx>div>dl>dd{margin-top:5px}
@@ -126,6 +143,11 @@ footer .site:last-child{margin-right:0}
 .sub .mid_cnt .txt_bx>div>dl>dd>span>i{float:left;padding:0 5px;background-color:#f5f5f5}
 .sub .mid_cnt .txt_bx>div>dl>dd>span>i+i{margin-left:10px}
 .sub .mid_cnt .txt_bx>div>dl>dd>span>b{font-weight:500}
+.sub .mid_cnt .txt_bx>div>dl>dd>p{margin-top:5px}
+.sub .mid_cnt .txt_bx>div>dl>dd>p>b{font-weight:500}
+.sub .mid_cnt .txt_bx>div>dl>dd .info_bx{width:500px;margin:20px 0;padding:10px;border:3px solid #d5d5d5;border-radius:10px;box-sizing:border-box}
+.sub .mid_cnt .txt_bx>div>dl>dd .info_bx>p>i{font-size:18px;text-decoration:underline}
+.sub .mid_cnt .txt_bx>div>dl>dd .help_txt{color:#ff8914;font-size:13px}
 
 .css_tech .exam{margin-top:15px;padding:10px;border:1px solid #dedede;box-sizing:border-box}
 .css_tech .exam>dt{margin-bottom:10px;font-weight:500}
@@ -139,3 +161,17 @@ footer .site:last-child{margin-right:0}
 .css_tech .exam>dd>ul>li>span>i{display:block}
 .css_tech .exam>dd>img{max-width:100%;max-height:100%}
 .css_tech .exam>dd>img+img{margin-top:15px}
+
+.javascript .cnt_area .mid_cnt .basic .table{border-top:1px solid #7c7c7c;border-bottom:1px solid #7c7c7c;box-sizing:border-box}
+.javascript .cnt_area .mid_cnt .basic .table .body{overflow-y:initial;height:151px}
+.javascript .cnt_area .mid_cnt .basic .table .head>table>thead>tr>th,
+.javascript .cnt_area .mid_cnt .basic .table .body>table>tbody>tr>td{border-right:1px solid #7c7c7c;box-sizing:border-box}
+.javascript .cnt_area .mid_cnt .basic .table .head>table>thead>tr>th,
+.javascript .cnt_area .mid_cnt .basic .table .body>table>tbody>tr>td:last-child(){border-right:none}
+.javascript .cnt_area .mid_cnt .basic .table .body>table>tbody>tr:last-child(){border-bottom:none}
+
+.js_motion .cnt_area .mid_cnt .runtime .img_bx{width:600px}
+.js_motion .cnt_area .mid_cnt .runtime .img_bx>img{max-width:100%;max-height:100%}
+.js_motion .cnt_area .mid_cnt .motion .img_bx{width:600px}
+.js_motion .cnt_area .mid_cnt .motion .img_bx>img{max-width:100%;max-height:100%}
+.js_motion .cnt_area .mid_cnt .motion>dd>span{color:#d8d8d8;font-size:12px}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>컬럼 고정 이벤트 | 노버스메이 웹 퍼블리싱 기술 블로그</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=0.1,maximum-scale=1,user-scalable=yes,viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="title" content="노버스메이 웹퍼블리싱 기술 블로그">
+	<meta name="description" content="노버스메이 웹퍼블리싱 기술 블로그 페이지입니다.">
+	<meta name="keywords" content="웹퍼블리싱,웹퍼블리싱기술 블로그,기술 블로그">
+	<meta name="author" content="khi">
+	<meta name="og:title" content="노버스메이 웹퍼블리싱 기술 블로그">
+	<meta name="og:url" content="www.novusmay.com">
+	<meta name="og:site_name" content="노버스메이 웹퍼블리싱 기술 블로그">
+	<meta name="og:description" content="노버스메이 웹퍼블리싱 기술 블로그 페이지입니다.">
+	<meta name="og:image" content="#none">
+	<link rel="shortcut icon" type="image/x-icon" href="../../img/favicon.png">
+	<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../css/font.css">
+	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+	<div class="inner">
+		<header>
+			<div class="wrap">
+				<h1><a href="../../index.html">노버스메이 웹 퍼블리싱 기술 블로그</a></h1>
+			</div>
+		</header>
+		<div class="container sub fixed">
+			<div class="wrap">
+				<div class="cnt_area">
+					<div class="area_wrap">
+						<div class="top_cnt">
+							<button type="button" class="btn_prev"></button>
+							<dl>
+								<dt class="title">컬럼 고정 이벤트</dt>
+								<dd class="info">
+									<span class="date">2021.04.20</span>
+									<span class="name">김수현</span>
+								</dd>
+							</dl>
+						</div>
+						<div class="mid_cnt">
+							<div class="txt_bx">
+								<div>
+									<dl>
+										<dt>CSS</dt>
+										<dd>
+											<p>· 고정하고자 하는 요소에 position:relative / z-index 속성 부여하기</p>
+											<p> → relative는 static인 상태를 기준으로 지정한 픽셀만큼 이동</p>
+											<p>ex) .a{position:relative;background-color:#fff;z-index:100}</p>
+											<p> → 다른 요소들보다 상위에 노출되어야하기때문에 background-color와 z-index 속성 부여</p>
+										</dd>
+									</dl>
+									<dl class="script">
+										<dt>Script</dt>
+										<dd>
+											<img src="../../img/study/fixed_code.png" alt="컬럼 고정 스크립트">
+											<p>· 스크롤을 움직이는 주체가 되는 요소에 스크롤 이벤트 주기</p>
+											<p>ex) $(window) / $('.table')</p>
+											<p>· 스크롤을 움직인 값을 담아올 변수 선언</p>
+											<p>· 고정된 컬럼에 left값 부여</p>
+										</dd>
+									</dl>
+									<dl>
+										<dt>해당 이벤트가 적용된 사이트(210420 기준)</dt>
+										<dd>
+											<p>· <b>[타임키퍼 리뉴얼>프로젝트관리>요약정보]</b> http://106.255.227.210:1023/project_main.html</p>
+											<p>· <b>[한화기계>환경/보건>건강검진관리]</b> http://106.255.227.210:1032/medical_list.html</p>
+											<p>· <b>[샘큐>SCK어드민>고객사리스트]</b> http://106.255.227.210:1015/SCK/admin/client_list.html</p>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="../../js/vendor/jquery-1.12.4.min.js"></script>
+	<script src="../../js/common.js"></script>
+	<script>
+	</script>
+</body>
+</html>
